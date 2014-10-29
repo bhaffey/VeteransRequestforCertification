@@ -1,0 +1,490 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Veterans Request for Enrollment Certification</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/jquery.validate.js" type="text/javascript"></script>
+    <script src="js/jquery-ui-1.8.17.custom.min.js" type="text/javascript"></script>
+    <script src="js/forms/veterans.js" type="text/javascript"></script>
+	<script src="js/jquery.MultiFile.js" type="text/javascript" language="javascript"></script> 
+	
+    
+    
+    
+<script>
+$( document ).ready(function() {
+	$("#chapter_number_or_title").change(function() {
+		if ($("#chapter_number_or_title option:selected").val() == "ch33") {
+			$("#percent").show();
+		} else {
+			$("#percent").hide();			
+		}
+			
+	});
+	
+	$("input[type='radio']").click(function(){
+		  if($("input:radio[value='CPE student']").is(":checked")) {
+				$("#CPE_term_requesting_certification").show();
+				$("#term_requesting_certification").hide();
+			}
+		  else {
+				$("#term_requesting_certification").show();
+				$("#CPE_term_requesting_certification").hide();
+		  }
+	});
+	
+});
+
+</script>
+
+     
+<style>    
+label.error {
+    color: #FF0000;
+    position:absolute;
+	left: 280px;
+	margin-left:0px;
+	
+}
+
+input{border:solid 1px #999}
+textarea{border:solid 1px #999}
+select{border:solid 1px #999}
+</style>    
+	
+     
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="header">
+        Veterans Request for Enrollment Certification
+      </div>
+       
+<span style="padding-left:10px;font-size:13px">| <a href="https://appsrv.pace.edu/osa/login/logout.cfm" target="new" style="font-size:13px;">Logout</a> |</span>
+
+      <form id="mainform" method="post"  enctype="multipart/form-data" 
+      
+
+       
+      
+      action="veterans_process.cfm"       	
+
+
+>
+     <style>
+	 p{padding-top:20px;padding-bottom:20px}
+	 strong{font-weight:bold}
+	 hr{color: #fefefe; 
+background-color: #fefefe; opacity:50%;;
+height: 1px;
+margin-top:30px;margin-bottom:10px}
+	 </style> 
+
+
+
+
+<p style="font-size: 1.2em; font-weight: bold">You must complete this form for <strong>
+<u>each term/semester</u></strong> 
+in which you wish to utilize GI BILL/VA educational benefits at
+ Pace University once you have officially registered for courses.</p>
+
+<p><strong><u>New/Transfer students:</u></strong> If you have not done so already, please attach as a scanned .pdf document your Certificate of Eligibility and Member-4 DD-214  in the designated section at the end of this form. 
+Alternatively, you may also submit these items via LAN Fax, <a href="tel:914-989-8789" value="+19149898789" target="_blank">914-989-8789</a>.</p>
+
+
+ <span style="color:red;font-size:13px">* Denotes Required Fields</span>
+
+ 
+
+
+
+<table border=0 cellpadding="0" cellspacing="5" style="font-size:17px">
+<tr>
+<td style="font-size:17px">   
+<strong>UID:</strong> 
+</td>
+<td style="font-size:17px">
+	  <input type="text" name="student_id" value="U00912823" style="border:0px" onfocus="blur()" />
+</td>
+</tr> 
+
+
+
+<tr>
+<td style="font-size:17px">
+<strong>First name: </strong>
+</td>
+<td style="font-size:17px">
+<input type="text" name="first_name" value="Bryn" style="border:0px" onfocus="blur()"/>
+</td>
+</tr> 
+
+   
+
+
+ 
+<tr>
+<td style="font-size:17px">
+<strong>Last name:</strong> 
+</td>
+<td style="font-size:17px">
+<input type="text" name="last_name" value="Haffey" style="border:0px" onfocus="blur()"/>
+</td>
+</tr>    
+
+
+
+<tr>
+<td style="font-size:17px">   
+<strong>Email:</strong> 
+</td>
+<td style="font-size:17px;width:500px">
+	<div style="position:relative">
+	
+    
+    <input type="text" name="email" value="bhaffey@pace.edu" style="border:0px;padding-right:5px" onfocus="blur()"/>
+    
+     
+    </div>
+</td>
+</tr>    
+   
+   
+    
+<tr>
+<td style="font-size:17px">   
+<strong>Date of Birth: </strong>
+</td>
+<td style="font-size:17px">
+
+5/19/1983
+<input type="hidden" name="DOB" value="5/19/1983" />
+
+
+
+</td></tr>
+
+</table> 
+
+
+<hr style="margin-top:20px"/> 
+<div style="position:relative">
+<span style="color:red;font-weight:bold;font-size:18px">*</span>    <label for="current_status"><strong>Current Status:</strong></label><br />
+<input type="radio" name="student_type" value="new admitted student" class="required current_status">&nbsp;New/Transfer Admitted student<br>
+<input type="radio" name="student_type" value="returning student">&nbsp;Returning student<br>
+<input type="radio" name="student_type" value="CPE student">&nbsp;Continuing and Professional Education (CPE) student (Non-Degree)
+</div>
+
+<hr />
+
+<div style="position:relative">
+<span style="color:red;font-weight:bold;font-size:18px">*</span><strong> Term for which you are requesting certification:</strong>  <br>
+
+
+<select id="term_requesting_certification" name="term_requesting_certification" class="required term_requesting_certification" style="display:none">
+  <option value="" selected="selected"> - Term - </option>
+  <option value="Spring 2014">Spring 2014</option>
+  <option value="May Intersession 2014">May Intersession 2014</option>
+  <option value="Summer I 2014">Summer I 2014</option>
+  <option value="Summer II 2014">Summer II 2014</option>
+  <option value="August Intersession 2014">August Intersession 2014</option>
+  <option value="Fall 2014">Fall 2014</option>
+</select>
+
+<select id="CPE_term_requesting_certification" name="term_requesting_certification" class="required term_requesting_certification" style="display:none">
+  <option value="" selected="selected"> - Term - </option>
+  <option value="CPE201504">Continuing and Professional Education 201504</option>
+  <!--<option value="CPE201604">Continuing and Professional Education 201604</option>-->
+</select>
+<br>
+Please select the upcoming or current term.  You must submit this form separately for each term for which you would like to be certified.
+</div>
+
+
+ 
+<hr />
+ 
+<div style="position:relative">
+
+<span style="color:red;font-weight:bold;font-size:18px">*</span> <strong>Is this an:</strong> <br />
+<input type="radio" name="this_is_a" value="initial certification" class="required">&nbsp;Initial Certification<br>
+<input type="radio" name="this_is_a" value="re-cert/amended certification">&nbsp;Re-cert/Amended Certification (if you have added/dropped a course(s), even if the number of credits have remained the same)&nbsp;<br>
+<input type="radio" name="this_is_a" value="termination certification">&nbsp;Termination Certification (dropped all courses, no longer attending for the term)
+</div>
+
+
+<hr  />
+
+<div style="position:relative">
+<span style="color:red;font-weight:bold;font-size:18px">*</span> <strong>Will you begin the term on Active Duty? (Including Terminal Leave)</strong>&nbsp;<br /><input type="radio" name="active_duty" value="yes" class="required">&nbsp;Yes<br>
+  <input type="radio" name="active_duty" value="no">&nbsp;No<br>
+If not, but you are called into active duty  service during the course of the semester you must complete the  university's "<a href="https://www.pace.edu/office-student-assistance/sites/pace.edu.office-student-assistance/files/files/Forms/Leave%20of%20Absence%20Application.pdf" target="new">Leave of Absence Form</a>" and send it along with copies of  your deployment order(s) via the attachment option at the bottom of this form, or LAN fax <a href="tel:914-989-8789" value="+19149898789" target="_blank">914-989-8789</a>. Also please see on page 20 of the <a href="http://www.pace.edu/academic-catalogs/sites/pace.edu.academic-catalogs/files/files/FINAL_1213_UG_CATALOG_STATE_020113pdf.pdf" target="_blank">Academic Catalog</a> the University's Military Leave of Absence Policy.
+</div>
+
+
+<hr />
+
+<div style="position:relative">
+<p><strong>Health Insurance</strong><br>
+  Please note: If this is your first semester at Pace University, you have the option to waive the 
+  mandatory university's health insurance coverage b/c of your coverage via VA health benefits (Tricare) 
+  or any other private coverage you may have.  <span style="font-weight: bold; text-decoration: underline">
+  All full time undergraduate and graduate student veterans must have health insurance</span>.   
+  Student veterans will automatically be enrolled on the school accident/sickness plan when they register.  
+  You may waive the school&#39;s insurance if you provide comparable proof of coverage.  
+  Please sign onto <a href="https://portal8.pace.edu/cp/home/displaylogin" target="_blank">Pace Portal</a> and 
+  click the Student tab.  By scrolling down and viewing the left side options, you can select 
+  Health Insurance Waiver.  Click on this link and sign in again, which will open the site and 
+  enable you to complete the required information in order to Waive Out of the Student Health Insurance offering.  
+  Should you have any questions or concerns regarding health insurance please state them in the comment 
+  entry field at the end of this form and an OSA VA Team representative will be in touch with you shortly. 
+  If you are a returning/continuing student and have outside health insurance you must complete the 
+  electronic waiver found in your Pace Portal prior to the start of the Fall semester. 
+  <br><br>
+<strong>Deadlines: </strong><br>
+&nbsp; &nbsp;&#149;<strong>September 19, 2014 </strong>for Fall 2014<br>
+&nbsp; &nbsp;&#149; <strong>February 2, 2015 </strong>for Spring 2014 (only new students may waive during this period) <br>
+&nbsp; &nbsp;&#149; <strong>June 9, 2015 </strong>for Summer I 2015 <br>
+&nbsp; &nbsp;&#149; <strong>July 20, 2015 </strong>for Summer II 2015 <br>
+<br><strong>Please note: </strong> If you <strong>do not </strong> complete the online waiver by the deadlines listed above, you will automatically be enrolled in the Student Accident & Sickness Insurance Plan and be charged the annual premium: <br>
+
+&nbsp; &nbsp;&#149; <strong>Annual: </strong> $1,620.00 (Domestic) <br>
+<br>Should you have any questions or concerns regarding the health insurance, please state them in 
+the comment entry field at the end of this form, and an OSA VA Team representative will be in touch 
+with you shortly.  Should you NOT have health insurance, please indicate this by stating so in the 
+comment section of this form.
+</p>
+
+
+
+
+
+
+</div>  
+  
+
+<hr />
+ 
+
+
+<div style="position:relative">
+<span style="color:red;font-weight:bold;font-size:18px">*</span><strong> Number of Credits:</strong> 
+<input type="text" name="number_of_credits" class="required" maxlength="3" style="width:25px">
+<br>
+Please  indicate the number of credits you intend to take this term. If you change your enrollment, you must complete this form again.
+</div>
+
+
+<hr />
+
+<div style="position:relative">
+<span style="color:red;font-weight:bold;font-size:18px">*</span><strong> Military Status:</strong><br>
+Please select the option that most closely describes your status during the academic term for which you are completing this form.
+<br><input type="radio" name="military_status" value="Active" class="required">&nbsp;Active<br>
+<input type="radio" name="military_status" value="Veteran" >&nbsp;Veteran<br>
+<input type="radio" name="military_status" value="Dependent">&nbsp;Dependent<br>
+<input type="radio" name="military_status" value="Spouse" >&nbsp;Spouse<br>
+</div>  
+  
+
+<hr />
+
+
+<div id="page-wrap">
+<span style="color:red;font-weight:bold;font-size:18px">*</span> <strong>Chapter number or title of VA Educational Benefits program:</strong> 
+		<div style="position:relative">
+        
+        <select id="chapter_number_or_title" class="required chapter_number_or_title" name="chapter_number_or_title">
+	<option value="" selected="selected">Chapter Number or Value</option>
+	<option value="ch33">CH 33 Post-9/11 GB Bill</option>
+    <option value="ch31">CH 31 Vocational Rehabilitation</option>
+    <option value="activeduty">Active Duty Tuition Assistance</option>
+    
+    <option value="ch30">CH 30 Montgomery</option>
+    
+    <option value="ch1606">CH 1606 Selected Reserve</option>
+    
+    <option value="ch35">CH 35 Dependents</option>
+    
+		</select>
+	</div>
+    
+		<p id="percent" style="display: none"><span style="color:red;font-weight:bold;font-size:18px">*</span> <em>If you chose CH 33 Post 9/11 GI Bill, what is your percentage of coverage?</em> (This number could be found on the first page of your most recent COE.) 
+    <select id="CH33_percent_coverage" name="CH33_percent_coverage">
+			<option selected="" value="">Please choose one</option>
+		<option value="100%">100%</option>	<option value="90%">90%</option> <option value="80%">80%</option>
+    <option value="70%">70%</option>
+    <option value="60%">60%</option>
+    
+    <option value="50%">50%</option>
+    <option value="40%">40%</option>
+	    <option value="Notsure">Not sure</option>
+		</select></p>
+	
+	
+    
+    
+    
+Learn more about the benefit programs <a href="http://www.gibill.va.gov/benefits/index.html" target="new">here</a>.  You must apply for each of these benefits with the VA. If you have not done so already, visit <a href="https://vabenefits.vba.va.gov/vonapp/main.asp" target="new">VONAPP</a> and submit your application for benefits to the VA.
+
+</div>
+
+
+<hr />
+
+
+<div style="position:relative">  
+  
+<span style="color:red;font-weight:bold;font-size:18px">*</span> <strong>Are you Eligible for the Yellow Ribbon Program?</strong> <br>
+  <input type="radio" name="Eligible_for_yellow_ribbon" value="Yes" class="required">&nbsp;Yes<br>
+  <input type="radio" name="Eligible_for_yellow_ribbon" value="No" />&nbsp;No<br>
+  <input type="radio" name="Eligible_for_yellow_ribbon" value="Not sure">&nbsp;Not sure<br>
+
+You are eligible for the Yellow Ribbon Program if you are 100% covered under the Post 9/11 GI Bill (CH. 33). To be 100% covered under the Post 9/11 GI Bill, you must have served at least three years of aggregate active duty service after September 11, 2001 and have been honorably discharged. PLEASE NOTE: Veterans on Active Duty Status and spouses of veterans using GI BILL benefits while their veteran spouse is on Active Duty Status are NOT eligible for funds from the Yellow Ribbon Program nor are they eligible for CH 33's Basic Allowance for Housing. 
+</div>
+
+  
+  <hr />
+  
+
+   <div style="position:relative">
+<strong> What other forms, if any, of tuition assistance (Active Duty TA, NYS VTA, 50% Vet. Sch., Outside Sch., etc.) are you  anticipating to receive? </strong>
+  <div style="position:relative;width:600px"> <input type="text" name="other_tuition_assistance" />
+  </div>
+  <p>Should you be fully/100% covered under federal veteran/GI BILL benefits, you will not be eligible to utilize
+  or receive any additional form of tuition specific financial aid at the institutional or state level.
+  The ONLY form of financial aid that you may receive while being fully covered under GI BILL/VA
+  educational benefits are accepted federal educational Grants and/or Loans contingent upon
+  completing a FAFSA.</p></div>
+  
+    <hr />
+  
+  <div style="position:relative">
+  <strong>For New York State residents only: </strong><br>
+
+		<input type="radio" name="NYSResidentOnly" value="Veterans Tuition Award"> Veterans Tuition Award<br>
+        <input type="radio" name="NYSResidentOnly" value="New York State National Guard Tuition Assistance"> New York State National Guard Tuition Assistance
+
+  <br /><br />
+  
+  In order to be deemed eligible for either of the above awards you must complete a FASFA by visiting&nbsp;<a href="http://www.fafsa.ed.gov/" target="_blank">http://www.fafsa.ed.gov/</a> and you must apply for New York's&nbsp;<a href="http://www.hesc.com/content.nsf/" target="_blank">Tuition Assistance Program</a>.
+</div>
+
+  <hr /> 
+
+  <div style="position:relative">  
+<strong> Do you anticipate receiving a refund due to excessive financial aid in the form of accepted federal education grants and/or loans? </strong><br />
+<input type="checkbox" name="excessive_aid_refund" value="Yes"> Yes
+</div>
+
+ 
+    
+    <hr />
+
+<div style="position:relative">    
+    
+    <strong>Meal Plan<br>
+    </strong>Commuting undergraduate on-campus student veteran beneficiaries  have the option to keep the university's $160.00/semester commuter meal plan. Federal GI BILL benefits are tuition/fees specific, therefore will NOT cover this expenditure. Should you wish to keep this meal plan, the VA considers you to use your BAH to remit this charge.<Br /> 
+    
+    
+   <Br /> <input type="checkbox" name="meal_plan" value="keep">
+    Check here if you would like to keep the meal plan<Br />
+    
+    
+  <br>Please note: The Commuter Meal Plan is mandatory for all students living in  Pace's sponsored Residence Halls.
+</div>  
+  
+  
+<Hr />
+
+
+<div style="position:relative">
+    <strong>Immunization Compliance</strong> <br>
+    All student veterans matriculated in a degree program, enrolled for 6 or more credits, and participating in classes on a campus at Pace University must comply with the New York State Department of Health immunization requirements for admission (and continuation) as a Pace student detailed below.<br>
+    <br>Student veterans enrolled solely in online courses are not required to be in compliance.  Once registered for a course requiring attendance on campus, these students must meet all requirements. <br>
+  For more detailed information about the MMR process please visit: <a href="http://www.pace.edu/office-student-assistance/immunization" target="_blank">http://www.pace.edu/office-student-assistance/immunization</a> 
+</div>
+  
+  <hr />
+
+<div style="position:relative">
+
+<p><strong>Sallie Mae Payment Plan For Remaining Balance (if applicable)</strong>- 
+Should a tuition/fees balance exist after the application of your VA/GI BILL educational benefits, 
+it must be remitted in FULL prior to each semester&#39;s balance payment deadline to avoid incurring 
+the university&#39;s late fee. Similarly should you be residing in the campus dormitories, 
+you are responsible to remit the room/board related charges in full prior to each semester&#39;s 
+balance payment deadline to be permitted to move into the dorms and not incur the late fee. 
+This may be accomplished either by paying out of pocket, accepting loans, 
+or enrolling in the university&#39;s 0% interest payment plan offered 
+through <a href="https://tuitionpay.salliemae.com/TuitionPay/Welcome.aspx" target="_blank">Sallie Mae</a>. 
+It is prohibited to pay the room/board related charges on a semester-by-semester basis directly 
+upon receiving your GI BILL educational benefit&#39;s monthly basic allowance for housing (BAH). 
+All room/board charges must be paid up front prior to moving in.</p>
+
+</div>
+
+  
+  <hr />
+  
+  
+<div style="position:relative">
+  If you have any additional notes or circumstances we should know about regarding your Pace enrollment or VA benefits, please use this space to inform us. <br>
+  <br>
+ <strong> Comments:</strong><br>
+<textarea name="comments" cols="60" rows="5" id="comments" maxlength="250"></textarea>
+</div>
+
+
+<hr />
+
+<div style="position:relative">
+If needed, below please attach any veteran benefit-related documents(s) such as Active-Duty Tuition Assistance Voucher(s), CH 31's VA FORM 28-1905, your current or updated (if applicable) Certificate of Eligibility (first page) and/or your member-4 DD-214.
+<br /><br />Please Note: You do NOT have to submit your COE/DD-214 each term if no changes have been made in your percentage of coverage. You are responsible to keep track of the remaining time on your GI Bill benefits.<br />
+<br />Attachment <span style="font-style:italic">(you may attach multiple files by continuing to click the Browse button)</span>:
+
+    <input type="file" name="attached_file"  class="multi">
+	<br /><b style="font-size:15px">(Please note: these are the only file types that will be accepted by the file system: .doc, .docx, .pdf, .gif, .jpg, .png)</b>
+	
+	
+    
+</div>    
+    
+
+<hr />
+
+
+<div style="position:relative">
+<strong>Statement</strong> <Br />
+
+
+I understand that in order to comply with Veterans Administration (VA) regulations, Pace University must submit registration and, at times, academic progress reports to the VA. Moreover, I understand that any changes in my registration status or enrollment (e.g. add, drop, withdrawal) may affect the VA benefit amounts and, as a result, other financial aid, I receive.  Furthermore I understand that making any changes to my enrollment status/course schedule after the start of the term may result in the VA issuing a prorated payment thus penalizing me, even if I am 100% covered under federal educational VA benefits. Finally, I understand that I am responsible for any outstanding balance on my student account that is not covered by VA benefits.
+<br /><br />
+
+
+
+<input type="hidden" name="Todays_Date" value="7/29/2014">
+
+
+
+<br>
+
+<div style="width:auto;text-align:center">
+<input type="submit" value="Submit Form" style="height:40px;width:170px"
+
+>
+<br /><br />
+<span style="color:red;font-weight:bold;font-size:18px">*</span> By pressing the submit button, you agree to the Statement listed above.
+
+</div>
+</form>
+
+
+        </div><br><br>
+     <br><br><br><br><br><br>
+    </div>
+  </body>
+</html>

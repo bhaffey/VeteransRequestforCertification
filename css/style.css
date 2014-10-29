@@ -1,0 +1,298 @@
+body {
+	font-family: Arial;
+}
+
+h1 {
+	text-align: center;
+	font-size: 18pt;
+	font-weight: bold;
+}
+
+hr.gray {
+	clear:left;
+	border-top: 1px solid #ccc;
+}
+
+span.red {
+	color: #f00;
+}
+
+
+ol.numbered {
+	padding-left:3px;
+	list-style-type: decimal;
+}
+
+li.numbered {
+	list-style: outside decimal;
+}
+
+form#mainform {
+	margin-left: auto;
+	margin-right: auto;
+	width: 820px;
+}
+
+table.middle {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.inlineblock {
+	width:240px;
+	height:175px;
+	min-height: 175px;
+	display: -moz-inline-stack;
+	display: inline-block;
+	margin-top:10px;
+	font-weight: normal;
+	vertical-align: top;
+	text-align: left;
+	margin-left:10px;
+	margin-right:10px;
+	padding:5px;
+	zoom: 1;
+	*display: inline;
+}
+
+div.inlineblock:hover {
+	background-color: #F7EAAD;
+	cursor:pointer;
+}
+
+div.inlineblock.selected {
+	background-color: #BDF59D;
+}
+
+p.options {
+	clear: left;
+}
+
+p.padded {
+	padding:5px;
+}
+
+p.options:hover {
+	background-color: #F7EAAD;
+	cursor:pointer;
+}
+
+p.options.selected {
+	background-color: #BDF59D;
+}
+
+div.inlineblock li {
+	margin-left:10px;
+}
+
+div.inlineblock .checkbox {
+	position: relative;
+	text-align: right;
+	display: inline;
+}
+
+p.next {
+	padding-top: 10px;
+}
+tr.grid {
+	border-bottom: 1px solid #ccc;
+}
+
+td.yellow {
+	background-color: #F5FCA2;
+}
+
+td.gray {
+	background-color: #ccc;
+}
+
+td.blue {
+	background-color: #0040FF;
+	color: #fff;
+}
+
+td.pink {
+	background-color: #F7C6D5;
+}
+
+td.green {
+	background-color: #9DFC9A;
+}
+
+tr.header {
+	border-bottom: 2px solid #000;
+}
+
+th {
+	padding: 10px;
+	font-size: 14px;
+}
+
+td {
+	padding: 10px;
+	font-size: 12px;
+	text-align: left;
+}
+
+td.example {
+	background-color: #CFD5E8;
+}
+
+span.italic {
+	font-style:italic;
+}
+
+span.underline {
+	text-decoration: underline;
+}
+
+div.error {
+	color: #f00;
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+
+em.error {
+	padding-left: 5px;
+	color: #f00;
+}
+
+input.disabled {
+	background: #ccc;
+}
+
+div#header a {
+	color:#fff;
+	text-decoration:none;
+}
+
+#sortable { list-style-type: none; margin: 0; padding: 0; width: 21em; cursor:move;}
+#sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1em; height: 18px; }
+#sortable li span { position: absolute; margin-left: -1.3em; }
+li.ui-state-default {
+	border: 1px solid #000;
+}
+
+ul.bullets {
+	list-style-type: disc;
+}
+ul.bullets li {
+	margin-top:5px;
+	list-style: disc;
+	text-align: left;
+}
+
+div#wrapper {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div#header {
+	padding-top:7px;
+	padding-left:20px;
+	letter-spacing:1px;
+	font-size:23px;
+	vertical-align:middle;
+	color: #fff;
+	height:35px;
+	font-weight: bold;
+	background-color: #003C73;
+	background-image:url('../images/pace-logo.gif');
+	background-repeat:no-repeat;
+	background-position:center;
+}
+
+div.middle {
+	clear:both;
+	text-align:center;
+	margin-left: auto;
+	margin-right:auto;
+	margin-bottom:1em;
+}
+
+div.middle input.button {
+	padding: 10px;
+}
+
+span.bold {
+	font-weight: bold;
+}
+
+span.strike {
+	text-decoration: line-through;
+}
+
+input.error {
+	background-color: #FFBACB;
+}
+
+textarea.error {
+	background-color: #FFBACB;
+}
+
+div#left {
+	width: 50%;
+	float: left;
+}
+
+div#right {
+	width: 50%;
+	float: right;
+}
+
+div.form {
+	padding: 10px;
+}
+
+div.form fieldset {
+	width: 25em;
+	border: 0;
+	margin: 0;
+	padding: 1em;
+	float: left;
+}
+
+div.form fieldset legend {
+	font-weight: bold;
+}
+
+label.error {
+	color: #f00;
+	margin-left: 13em;
+}
+
+div.middle label.error {
+	color: #f00;
+	margin-left: .5em;
+}
+
+label.error2 {
+	color: #0f0;
+	margin-left: 13em;
+}
+
+div.form fieldset label {
+	margin-bottom:.5em;
+	width: 13em;
+	font-size: 1em;
+	line-height: 1.5em;
+	clear: left;
+	float: left;
+}
+
+div.form fieldset input, div.form fieldset select {
+	font-size: 0.8em;
+	height: 1.5em;
+	margin-bottom:.5em;
+	float: left;
+}
+
+.topspace {
+	margin-top: 10px;
+}
+
+
+
+.bottomspace {
+	margin-bottom: 10px;
+}
